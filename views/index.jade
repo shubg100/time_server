@@ -1,5 +1,19 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1= query 
+  h1 API Basejump: Timestamp microservice
+  h3 User stories:
+  ul 1. I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)
+  ul 2. If it does, it returns both the Unix timestamp and the natural language form of that date.
+  ul 3. If it does not contain a date or Unix timestamp, it returns null for those properties.
+  br
+  br
+  h3 Example Usage
+  code.red https://timestamp-api-shubg100.c9users.io/December%2015,%202015
+  br
+  br
+  code.red https://timestamp-api-shubg100.c9users.io/1450137600
+  br
+  h3 Example Output
+  code.red { "unix": 1450137600, "natural": "December 15, 2015" }
